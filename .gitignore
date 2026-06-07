@@ -6,3 +6,9 @@ node_modules/
 .wrangler/
 .env
 .env.*
+.obsidian/
+Desktop/
+BEN/
+Clippings/
+Templates/
+*.canvas
