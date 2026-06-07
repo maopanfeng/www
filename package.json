@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "hugo --gc --minify",
+    "deploy": "hugo --gc --minify && wrangler pages deploy public --project-name maopanfeng"
+  }
+}

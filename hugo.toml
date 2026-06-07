@@ -1,0 +1,20 @@
+baseURL = "https://www.maopanfeng.com/"
+title = "Maopanfeng"
+theme = ["github.com/nanxiaobei/hugo-paper"]
+contentDir = "."
+publishDir = "public"
+defaultContentLanguage = "cn"
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  color = "linen"
+  name = "Maopanfeng"
+  bio = "Notes, investing, complexity, and ideas."
+  rss = true
+  math = true
