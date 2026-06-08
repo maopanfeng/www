@@ -3,6 +3,8 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+./scripts/sync-from-obsidian.sh
+
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "This folder is not a Git repository yet."
   exit 1
