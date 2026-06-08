@@ -1,0 +1,13 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}</title>
+  
+  {{ $style := resources.Get "main.css" }}
+  {{ if $style }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+  {{ end }}
+
+  <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | absURL }}?v={{ now.Unix }}" />
+  <link rel="apple-touch-icon" href="{{ "avatar.png" | absURL }}?v={{ now.Unix }}" />
+</head>

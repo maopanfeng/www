@@ -1,4 +1,6 @@
 .DS_Store
+.publish.log
+.publish.err.log
 .hugo_build.lock
 public/
 resources/

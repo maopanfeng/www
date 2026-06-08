@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="{{ .Lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>{{ .Title }} - Ben Thinking</title>
+    <style>
+        body { margin: 0; padding: 0; background: #fff; color: #000; font-family: -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        header { position: fixed; top: 0; left: 0; right: 0; height: 80px; z-index: 9999; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: center; }
+        .nav-container { width: 100%; max-width: 720px; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; }
+        .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex: 0 0 auto; }
+        .site-logo { width: 32px; height: 32px; border-radius: 6px; }
+        .site-title { font-weight: 800; font-size: 1.25rem; white-space: nowrap; display: inline-block !important; }
+        .nav-right { display: flex; align-items: center; gap: 15px; flex: 1; justify-content: flex-end; min-width: 0; }
+        .nav-link { font-size: 14px; opacity: 0.6; text-decoration: none; color: inherit; transition: opacity 0.2s; font-weight: 500; white-space: nowrap; }
+        .nav-link:hover { opacity: 1; }
+        .lang-switch { font-size: 12px; opacity: 0.4; font-weight: 700; }
+        .search-wrapper { display: flex; align-items: center; background: rgba(0,0,0,0.05); border-radius: 20px; padding: 6px 12px; margin-right: 5px; }
+        .search-box { background: transparent; border: none; font-size: 13px; width: 60px; outline: none; transition: width 0.3s; }
+        .search-box:focus { width: 90px; }
+        main { width: 100%; max-width: 720px; margin: 140px auto 0; padding: 0 24px; box-sizing: border-box; flex: 1; }
+        h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 2rem; text-align: left; line-height: 1.2; letter-spacing: -0.02em; }
+        .content { line-height: 1.8; opacity: 0.9; font-size: 17px; color: #111; }
+        .content p { margin-bottom: 1.5em; text-align: justify; }
+        
+        /* Giscus 容器样式 - 保持极致留白 */
+        .giscus-container { margin-top: 100px; padding-top: 40px; border-top: 1px solid rgba(0,0,0,0.05); margin-bottom: 80px; }
+
+        footer { width: 100%; padding: 60px 24px 60px; text-align: center; font-size: 11px; opacity: 0.2; letter-spacing: 0.05em; }
+        @media (max-width: 600px) { .nav-container { padding: 0 16px; } .site-title { font-size: 1.1rem; } .search-box { width: 40px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="{{ if eq .Lang "cn" }}/cn/{{ else }}/{{ end }}" class="logo-wrapper">
+                <img src="/logo.png" alt="" class="site-logo">
+                <span class="site-title">Ben Thinking</span>
+            </a>
+            <div class="nav-right">
+                <div class="search-wrapper">
+                    <input type="text" class="search-box" placeholder="Search..." onkeydown="handleSearch(event, this.value)">
+                </div>
+                {{ if eq .Lang "en" }}
+                    <a href="/cn/{{ .Slug | default .File.BaseFileName }}" class="lang-switch nav-link">中文</a>
+                    <a href="/cn/wiki" class="nav-link">Wiki</a>
+                    <a href="/cn/about" class="nav-link">About</a>
+                {{ else }}
+                    <a href="/{{ .Slug | default .File.BaseFileName }}" class="lang-switch nav-link">EN</a>
+                    <a href="/wiki" class="nav-link">Wiki</a>
+                    <a href="/about" class="nav-link">About</a>
+                {{ end }}
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <h1>{{ .Title }}</h1>
+            <div class="content">
+                {{ .Content }}
+            </div>
+
+            {{ if ne .Type "wiki" }}
+            <div class="giscus-container">
+                <script src="https://giscus.app/client.js"
+                    data-repo="maopanfeng/blog"
+                    data-repo-id="R_kgDORQEPOg"
+                    data-category="Announcements"
+                    data-category-id="DIC_kwDORQEPOs4C2aWQ"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="top"
+                    data-theme="light"
+                    data-lang="{{ if eq .Lang "cn" }}zh-CN{{ else }}en{{ end }}"
+                    crossorigin="anonymous"
+                    async>
+                </script>
+            </div>
+            {{ end }}
+        </article>
+    </main>
+
+    <footer>
+        &copy; {{ now.Year }} Ben Thinking. All thoughts evolve over time.
+    </footer>
+
+    <script>
+        function handleSearch(event, query) {
+            if (event.key === 'Enter' && query.trim() !== "") {
+                const searchPath = "{{ if eq .Lang "cn" }}/cn/{{ else }}/{{ end }}?q=" + encodeURIComponent(query);
+                window.location.href = searchPath;
+            }
+        }
+    </script>
+</body>
+</html>

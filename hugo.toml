@@ -1,20 +1,33 @@
 baseURL = "https://www.maopanfeng.com/"
 title = "Maopanfeng"
-theme = ["github.com/nanxiaobei/hugo-paper"]
-contentDir = "."
-publishDir = "public"
-defaultContentLanguage = "cn"
-hasCJKLanguage = true
-enableRobotsTXT = true
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
-[params]
-  color = "linen"
-  name = "Maopanfeng"
-  bio = "Notes, investing, complexity, and ideas."
-  rss = true
-  math = true
+[outputs]
+home = ["HTML", "JSON"]
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 1
+
+  [languages.cn]
+    contentDir = "content/cn"
+    languageName = "中文"
+    weight = 2
+    languageCode = "zh-cn"
+
+# 核心修正：填入你提供的 Giscus 真实 ID
+[params.giscus]
+    repo = "maopanfeng/blog"
+    repoId = "R_kgDORQEPOg"
+    category = "Announcements"
+    categoryId = "DIC_kwDORQEPOs4C2aWQ"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    theme = "preferred_color_scheme"

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en-us" }}">
+  {{ partial "head.html" . }}
+
+  <body style="margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; font-family: -apple-system, sans-serif;" class="dark:bg-black dark:text-white">
+    
+    {{ partial "header.html" . }}
+
+    <main style="flex: 1; width: 100%; max-width: 720px; margin: 120px auto 0 auto; padding: 0 24px; position: relative; box-sizing: border-box;">
+      
+      <aside class="sidebar-archive">
+        <h3 style="font-size: 11px; opacity: 0.3; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 1.5px;">Timeline</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          {{ range (where .Site.RegularPages "Section" "posts").GroupByDate "2006" }}
+          <li style="margin-bottom: 12px;"><a href="/" style="font-size: 13px; opacity: 0.5; text-decoration: none; color: inherit;">{{ .Key }}</a></li>
+          {{ end }}
+        </ul>
+      </aside>
+
+      <article>
+        {{ block "main" . }}{{ end }}
+      </article>
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    <style>
+      .sidebar-archive {
+        position: absolute;
+        left: calc(100% + 60px);
+        top: 0;
+        width: 100px;
+        display: none;
+      }
+      @media (min-width: 1150px) {
+        .sidebar-archive { display: block !important; }
+      }
+    </style>
+  </body>
+</html>

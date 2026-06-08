@@ -11,12 +11,12 @@ fi
 
 for folder in cn en; do
   if [ -d "$source_dir/$folder" ]; then
-    mkdir -p "$site_dir/$folder"
+    mkdir -p "$site_dir/content/$folder"
     rsync -a --delete \
       --exclude ".DS_Store" \
       --exclude ".obsidian" \
       --exclude ".git" \
-      "$source_dir/$folder/" "$site_dir/$folder/"
+      "$source_dir/$folder/" "$site_dir/content/$folder/"
   fi
 done
 
