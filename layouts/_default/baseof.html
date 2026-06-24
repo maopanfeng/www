@@ -11,7 +11,7 @@
       <aside class="sidebar-archive">
         <h3 style="font-size: 11px; opacity: 0.3; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 1.5px;">Timeline</h3>
         <ul style="list-style: none; padding: 0; margin: 0;">
-          {{ range (where .Site.RegularPages "Section" "posts").GroupByDate "2006" }}
+          {{ range (where .Site.RegularPages "Section" "genius").GroupByDate "2006" }}
           <li style="margin-bottom: 12px;"><a href="/" style="font-size: 13px; opacity: 0.5; text-decoration: none; color: inherit;">{{ .Key }}</a></li>
           {{ end }}
         </ul>

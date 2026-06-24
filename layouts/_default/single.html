@@ -7,11 +7,12 @@
     <style>
         body { margin: 0; padding: 0; background: #fff; color: #000; font-family: -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         header { position: fixed; top: 0; left: 0; right: 0; height: 80px; z-index: 9999; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: center; }
-        .nav-container { width: 100%; max-width: 720px; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; }
+        .nav-container { width: 100%; max-width: 960px; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; gap: 20px; }
         .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex: 0 0 auto; }
         .site-logo { width: 32px; height: 32px; border-radius: 6px; }
         .site-title { font-weight: 800; font-size: 1.25rem; white-space: nowrap; display: inline-block !important; }
-        .nav-right { display: flex; align-items: center; gap: 15px; flex: 1; justify-content: flex-end; min-width: 0; }
+        .nav-right { display: flex; align-items: center; gap: 14px; flex: 1; justify-content: flex-end; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+        .nav-right::-webkit-scrollbar { display: none; }
         .nav-link { font-size: 14px; opacity: 0.6; text-decoration: none; color: inherit; transition: opacity 0.2s; font-weight: 500; white-space: nowrap; }
         .nav-link:hover { opacity: 1; }
         .lang-switch { font-size: 12px; opacity: 0.4; font-weight: 700; }
@@ -41,14 +42,9 @@
                 <div class="search-wrapper">
                     <input type="text" class="search-box" placeholder="Search..." onkeydown="handleSearch(event, this.value)">
                 </div>
-                {{ if eq .Lang "en" }}
-                    <a href="/cn/{{ .Slug | default .File.BaseFileName }}" class="lang-switch nav-link">中文</a>
-                    <a href="/cn/wiki" class="nav-link">Wiki</a>
-                    <a href="/cn/about" class="nav-link">About</a>
-                {{ else }}
-                    <a href="/{{ .Slug | default .File.BaseFileName }}" class="lang-switch nav-link">EN</a>
-                    <a href="/wiki" class="nav-link">Wiki</a>
-                    <a href="/about" class="nav-link">About</a>
+                <a href="{{ if eq .Lang "en" }}/cn/{{ .Section }}/{{ .Slug | default .File.BaseFileName }}{{ else }}/{{ .Section }}/{{ .Slug | default .File.BaseFileName }}{{ end }}" class="lang-switch nav-link">{{ if eq .Lang "en" }}中文{{ else }}EN{{ end }}</a>
+                {{ range site.Menus.main }}
+                    <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
                 {{ end }}
             </div>
         </div>

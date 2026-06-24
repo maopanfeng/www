@@ -35,8 +35,8 @@ home = ["HTML", "JSON"]
     theme = "preferred_color_scheme"
 
 [[languages.en.menu.main]]
-  name = "Posts"
-  url = "/posts/"
+  name = "Genius"
+  url = "/genius/"
   weight = 10
 [[languages.en.menu.main]]
   name = "Stocks"
@@ -64,8 +64,8 @@ home = ["HTML", "JSON"]
   weight = 70
 
 [[languages.cn.menu.main]]
-  name = "Posts"
-  url = "/cn/posts/"
+  name = "Genius"
+  url = "/cn/genius/"
   weight = 10
 [[languages.cn.menu.main]]
   name = "Stocks"
