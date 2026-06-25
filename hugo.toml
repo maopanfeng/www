@@ -23,15 +23,15 @@ home = ["HTML", "JSON"]
   description = "A lifelong notebook on investing, learning, family and life."
 
 [params.giscus]
-    repo = "maopanfeng/blog"
-    repoId = "R_kgDORQEPOg"
+    repo = "maopanfeng/www"
+    repoid = "R_kgDORQEPOg"
     category = "Announcements"
-    categoryId = "DIC_kwDORQEPOs4C2aWQ"
+    categoryid = "DIC_kwDORQEPOs4C2aWQ"
     mapping = "pathname"
     strict = "0"
-    reactionsEnabled = "1"
-    emitMetadata = "0"
-    inputPosition = "bottom"
+    reactionsenabled = "1"
+    emitmetadata = "0"
+    inputposition = "bottom"
     theme = "preferred_color_scheme"
 
 [[languages.en.menu.main]]
