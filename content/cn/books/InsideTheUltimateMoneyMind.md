@@ -1,5 +1,5 @@
 ---
-title: "Gemini"
+title: 终极金钱心智
 date: 2026-01-01
 draft: false
 ---

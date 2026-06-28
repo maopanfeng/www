@@ -1,6 +1,6 @@
 ---
 title: Inside the Ultimate Money Mind
-date: 2026-01-01
+date: 2024-02-01
 draft: false
 ---
 
