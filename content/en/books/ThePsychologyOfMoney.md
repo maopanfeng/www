@@ -1,11 +1,12 @@
 ---
-title: 《金钱心理学》
+title: The Psychology Of Money
 date: 2026-05-01
 draft: false
 ---
 
 
-**《金钱心理学》
+**The Psychology Of Money
+
 
 
 
