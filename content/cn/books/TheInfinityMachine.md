@@ -2,27 +2,12 @@
 title: 哈萨比斯：谷歌AI之脑
 date: 2026-05-01
 keywords:
-  - Ontology
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - AI
+  - DeepMind
 draft: false
 ---
 哈萨比斯：谷歌AI之脑
-Palantir内部有一个非常重要的词：Ontology
+
 
 
 ---
