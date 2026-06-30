@@ -1,5 +1,5 @@
 ---
-title: Alchian
+title: 阿尔钦
 date: 2002-10-01
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "复杂性投资的逻辑"
+title: 复杂系统
 date: 2020-02-01
 draft: false
 ---

@@ -9,3 +9,4 @@ draft: false
 
 American business is business
 
+生意是人的每一件事的根本

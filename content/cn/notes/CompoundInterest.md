@@ -1,5 +1,5 @@
 ---
-title: "Compound Interest"
+title: 复利
 date: 2003-06-01
 draft: false
 ---
