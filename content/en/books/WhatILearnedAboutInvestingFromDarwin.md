@@ -11,3 +11,6 @@ What I Learned About Investing From Darwin
 My best recommendation in 2026
 
 
+**minimizing big risks**,
+purchasing **high-quality assets** at fair prices, 
+practicing **extreme patience** or "laziness, permanent ownership mindset

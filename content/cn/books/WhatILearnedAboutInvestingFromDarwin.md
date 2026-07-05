@@ -7,7 +7,20 @@ draft: false
 我从达尔文那里学到的投资知识
 What I Learned About Investing From Darwin
 
-后知后觉
+
+
+-风险
+
+-合理价格买入高质量公司
+
+-持有
+
+
+
+
+投入资本
+
+
 
 
 

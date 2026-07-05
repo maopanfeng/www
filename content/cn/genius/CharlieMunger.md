@@ -1,6 +1,6 @@
 ---
-title: "Charlie Munger"
-date: 2004-01-01
+title: Charlie Munger
+date: 2014-01-01
 draft: false
 ---
 
