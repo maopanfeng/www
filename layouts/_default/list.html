@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>{{ .Title }} - Ben Thinking</title>
+    <title>{{ .Title }} - Growth Investing</title>
     <style>
         body { margin: 0; padding: 0; background: #fff; color: #000; font-family: -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         header { position: fixed; top: 0; left: 0; right: 0; height: 80px; z-index: 9999; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: center; }
@@ -39,7 +39,7 @@
         <div class="nav-container">
             <a href="{{ if eq .Lang "cn" }}/cn/{{ else }}/{{ end }}" class="logo-wrapper">
                 <img src="/logo.png" alt="" class="site-logo">
-                <span class="site-title">Ben Thinking</span>
+                <span class="site-title">Growth Investing</span>
             </a>
             <nav class="nav-right">
                 {{ if eq .Lang "en" }}
@@ -78,7 +78,7 @@
     </main>
 
     <footer>
-        &copy; {{ now.Year }} Ben Thinking. All thoughts evolve over time.
+        &copy; {{ now.Year }} Growth Investing. All thoughts evolve over time.
     </footer>
 </body>
 </html>
