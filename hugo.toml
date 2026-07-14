@@ -21,7 +21,7 @@ home = ["HTML", "JSON"]
 
 # 核心修正：填入你提供的 Giscus 真实 ID
 [params.giscus]
-    repo = "maopanfeng/blog"
+    repo = "maopanfeng/www"
     repoId = "R_kgDORQEPOg"
     category = "Announcements"
     categoryId = "DIC_kwDORQEPOs4C2aWQ"
