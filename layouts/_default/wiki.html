@@ -7,15 +7,14 @@
     <style>
         body { margin: 0; padding: 0; background: #fff; color: #000; font-family: -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; align-items: center; }
         header { position: fixed; top: 0; left: 0; right: 0; height: 80px; z-index: 9999; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: center; }
-        .nav-container { width: 100%; max-width: 960px; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; gap: 20px; }
+        .nav-container { width: 100%; max-width: 720px; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; }
         .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
         .site-logo { width: 32px; height: 32px; border-radius: 6px; }
         .site-title { font-weight: 800; font-size: 1.25rem; }
         
         /* 导航右侧布局 */
-        .nav-right { display: flex; align-items: center; gap: 14px; justify-content: flex-end; min-width: 0; overflow-x: auto; scrollbar-width: none; }
-        .nav-right::-webkit-scrollbar { display: none; }
-        .nav-link { font-size: 14px; opacity: 0.6; text-decoration: none; color: inherit; transition: opacity 0.2s; white-space: nowrap; }
+        .nav-right { display: flex; align-items: center; gap: 15px; }
+        .nav-link { font-size: 14px; opacity: 0.6; text-decoration: none; color: inherit; transition: opacity 0.2s; }
         .nav-link:hover { opacity: 1; }
         .lang-switch { font-size: 12px; opacity: 0.4; font-weight: 700; margin-right: 5px; }
 
@@ -43,10 +42,15 @@
                 <span class="site-title">Growth Investing</span>
             </a>
             <div class="nav-right">
-                <a href="{{ if eq .Lang "en" }}/cn/wiki{{ else }}/wiki{{ end }}" class="lang-switch nav-link">{{ if eq .Lang "en" }}中文{{ else }}EN{{ end }}</a>
-                {{ range site.Menus.main }}
-                    <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+                {{ if eq .Lang "en" }}
+                    <a href="/cn/wiki" class="lang-switch nav-link">中文</a>
+                {{ else }}
+                    <a href="/wiki" class="lang-switch nav-link">EN</a>
                 {{ end }}
+                
+                <a href="{{ "wiki" | relLangURL }}" class="nav-link">Wiki</a>
+                
+                <a href="{{ "about" | relLangURL }}" class="nav-link">About</a>
             </div>
         </div>
     </header>
@@ -56,7 +60,7 @@
 
         <div class="post-list">
             <h2>{{ if eq .Lang "cn" }}知识节点{{ else }}Knowledge Nodes{{ end }}</h2>
-            {{ range (where .Site.RegularPages "Section" "genius") }}
+            {{ range (where .Site.RegularPages "Section" "posts") }}
                 {{ if and (eq .Lang $.Lang) (ne .Title "About") }}
                 <article class="post-item">
                     <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
@@ -70,7 +74,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>
         const allNodes = [
-            {{ range (where .Site.RegularPages "Section" "genius") }}
+            {{ range (where .Site.RegularPages "Section" "posts") }}
                 {{ if and (eq .Lang $.Lang) (ne .Title "About") }}
                 { id: "{{ .Title }}", url: "{{ .Permalink }}" },
                 {{ end }}

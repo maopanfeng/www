@@ -1,4 +1,4 @@
-baseURL = "https://www.maopanfeng.com/"
+baseURL = "/"
 title = "Growth Investing"
 
 defaultContentLanguage = "en"
@@ -19,75 +19,15 @@ home = ["HTML", "JSON"]
     weight = 2
     languageCode = "zh-cn"
 
-[params]
-  description = "A lifelong notebook on investing, learning, family and life."
-
+# 核心修正：填入你提供的 Giscus 真实 ID
 [params.giscus]
-    repo = "maopanfeng/www"
-    repoid = "R_kgDORQEPOg"
+    repo = "maopanfeng/blog"
+    repoId = "R_kgDORQEPOg"
     category = "Announcements"
-    categoryid = "DIC_kwDORQEPOs4C2aWQ"
+    categoryId = "DIC_kwDORQEPOs4C2aWQ"
     mapping = "pathname"
     strict = "0"
-    reactionsenabled = "1"
-    emitmetadata = "0"
-    inputposition = "bottom"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
     theme = "preferred_color_scheme"
-
-[[languages.en.menu.main]]
-  name = "Genius"
-  url = "/genius/"
-  weight = 10
-[[languages.en.menu.main]]
-  name = "Stocks"
-  url = "/stocks/"
-  weight = 20
-[[languages.en.menu.main]]
-  name = "Notes"
-  url = "/notes/"
-  weight = 30
-[[languages.en.menu.main]]
-  name = "Blogs"
-  url = "/blogs/"
-  weight = 40
-[[languages.en.menu.main]]
-  name = "Books"
-  url = "/books/"
-  weight = 50
-[[languages.en.menu.main]]
-  name = "Wiki"
-  url = "/wiki/"
-  weight = 60
-[[languages.en.menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 70
-
-[[languages.cn.menu.main]]
-  name = "Genius"
-  url = "/cn/genius/"
-  weight = 10
-[[languages.cn.menu.main]]
-  name = "Stocks"
-  url = "/cn/stocks/"
-  weight = 20
-[[languages.cn.menu.main]]
-  name = "Notes"
-  url = "/cn/notes/"
-  weight = 30
-[[languages.cn.menu.main]]
-  name = "Blogs"
-  url = "/cn/blogs/"
-  weight = 40
-[[languages.cn.menu.main]]
-  name = "Books"
-  url = "/cn/books/"
-  weight = 50
-[[languages.cn.menu.main]]
-  name = "Wiki"
-  url = "/cn/wiki/"
-  weight = 60
-[[languages.cn.menu.main]]
-  name = "About"
-  url = "/cn/about/"
-  weight = 70
