@@ -31,3 +31,6 @@ home = ["HTML", "JSON"]
     emitMetadata = "0"
     inputPosition = "bottom"
     theme = "preferred_color_scheme"
+
+[markup.goldmark.renderer]
+unsafe = true
