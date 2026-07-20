@@ -1,11 +1,13 @@
 ---
 title: 格雷厄姆或是增长
+author: 詹姆斯 安德森
 date: 2025-12-01
 draft: false
 ---
 
-格雷厄姆或是增长
-Graham or Growth
+**格雷厄姆或是增长Graham or Growth
+詹姆斯 安德森James Anderson
+
 
 第一部分：均值会回归吗？
 

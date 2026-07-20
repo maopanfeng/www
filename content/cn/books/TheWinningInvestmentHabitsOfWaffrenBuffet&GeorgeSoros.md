@@ -1,10 +1,11 @@
 ---
 title: 巴菲特与索罗斯的投资习惯
+author: 
 date: 2023-01-01
 draft: false
 ---
 
-巴菲特与索罗斯的投资习惯
+**巴菲特与索罗斯的投资习惯
 The Winning Investment Habits Of Waffren Buffet & George Soros
 
 

@@ -1,5 +1,6 @@
 ---
 title: 我从达尔文那里学到的投资知识
+author: 
 date: 2026-04-01
 draft: false
 ---
