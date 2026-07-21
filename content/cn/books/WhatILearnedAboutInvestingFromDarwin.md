@@ -12,7 +12,9 @@ What I Learned About Investing From Darwin
 
 -风险
 
+
 -合理价格买入高质量公司
+
 
 -持有
 
