@@ -97,7 +97,35 @@
             .search-box:focus { width: 60px; }
             .nav-right { gap: 10px; }
         }
-        @media (max-width: 1150px) { .sidebar-archive { display: none; } }
+        .mobile-archive {
+            display: none;
+            margin: -26px 0 44px;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding-bottom: 14px;
+        }
+        .mobile-archive::-webkit-scrollbar { display: none; }
+        .mobile-archive span {
+            display: inline-block;
+            cursor: pointer;
+            opacity: 0.35;
+            transition: 0.2s;
+            font-family: monospace;
+            font-size: 12px;
+            margin-right: 18px;
+        }
+        .mobile-archive span:hover,
+        .mobile-archive span.active {
+            opacity: 1;
+            color: #000;
+            font-weight: 700;
+        }
+        @media (max-width: 1150px) {
+            .sidebar-archive { display: none; }
+            .mobile-archive { display: block; }
+        }
     </style>
 </head>
 <body>
@@ -143,6 +171,12 @@
                 {{ end }}
             </ul>
         </aside>
+
+        <nav class="mobile-archive" aria-label="Timeline">
+            {{ range (seq 2026 -1 2000) }}
+            <span onclick="filterYear('{{ . }}')" class="year-btn">{{ . }}</span>
+            {{ end }}
+        </nav>
 
         <div class="post-list" id="post-container">
             {{ range sort .Site.RegularPages "Date" "desc" }}
