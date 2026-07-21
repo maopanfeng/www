@@ -1,6 +1,7 @@
 ---
 title: 我从达尔文那里学到的投资知识
-author: 
+author:
+  - 普拉克 普拉萨德
 date: 2026-04-01
 draft: false
 ---
