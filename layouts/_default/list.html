@@ -43,12 +43,23 @@
             </a>
             <nav class="nav-right">
                 {{ if eq .Lang "en" }}
-                    <a href="/cn/{{ .Section }}/" class="lang-switch nav-link">中文</a>
+                    <a href="/cn/" class="lang-switch nav-link">中文</a>
+                    <a href="/genius" class="nav-link">Genius</a>
+                    <a href="/stocks" class="nav-link">Stocks</a>
+                    <a href="/notes" class="nav-link">Notes</a>
+                    <a href="/blogs" class="nav-link">Blogs</a>
+                    <a href="/books" class="nav-link">Books</a>
+                    <a href="/wiki" class="nav-link">Wiki</a>
+                    <a href="/about" class="nav-link">About</a>
                 {{ else }}
-                    <a href="/{{ .Section }}/" class="lang-switch nav-link">EN</a>
-                {{ end }}
-                {{ range site.Menus.main }}
-                    <a href="{{ .URL }}" class="nav-link{{ if eq $.RelPermalink .URL }} active{{ end }}">{{ .Name }}</a>
+                    <a href="/" class="lang-switch nav-link">EN</a>
+                    <a href="/cn/genius" class="nav-link">Genius</a>
+                    <a href="/cn/stocks" class="nav-link">Stocks</a>
+                    <a href="/cn/notes" class="nav-link">Notes</a>
+                    <a href="/cn/blogs" class="nav-link">Blogs</a>
+                    <a href="/cn/books" class="nav-link">Books</a>
+                    <a href="/cn/wiki" class="nav-link">Wiki</a>
+                    <a href="/cn/about" class="nav-link">About</a>
                 {{ end }}
             </nav>
         </div>
