@@ -126,6 +126,65 @@
             .sidebar-archive { display: none; }
             .mobile-archive { display: block; }
         }
+    
+
+        /* Vertical timeline override */
+        .mobile-archive { display: none !important; }
+        .sidebar-archive {
+            display: block !important;
+            position: fixed !important;
+            left: auto !important;
+            right: 24px !important;
+            top: 120px !important;
+            width: 72px !important;
+            height: auto !important;
+            z-index: 20;
+        }
+        .sidebar-archive h3 {
+            font-size: 10px;
+            opacity: 0.16;
+            margin-bottom: 12px;
+            letter-spacing: 0.08em;
+        }
+        .sidebar-archive ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.75;
+            max-height: none;
+            overflow: visible;
+        }
+        .sidebar-archive span {
+            display: block;
+            cursor: pointer;
+            opacity: 0.35;
+            font-family: monospace;
+            transition: 0.2s;
+        }
+        .sidebar-archive span:hover,
+        .sidebar-archive span.active {
+            opacity: 1;
+            color: #000;
+            font-weight: 700;
+        }
+        @media (max-width: 760px) {
+            main {
+                padding-right: 92px;
+            }
+            .sidebar-archive {
+                right: 12px !important;
+                top: 104px !important;
+                width: 54px !important;
+            }
+            .sidebar-archive h3 {
+                display: none;
+            }
+            .sidebar-archive ul {
+                font-size: 11px;
+                line-height: 1.65;
+            }
+        }
     </style>
 </head>
 <body>
