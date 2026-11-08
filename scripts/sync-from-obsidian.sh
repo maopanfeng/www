@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-source_dir="/Users/ben/Obsidian/WWW"
+source_dir="${OBSIDIAN_PUBLISH_DIR:-/Users/ben/Obsidian/WWW}"
 site_dir="$(cd "$(dirname "$0")/.." && pwd)"
 
 if [ ! -d "$source_dir" ]; then
@@ -12,7 +12,9 @@ fi
 for folder in cn en; do
   if [ -d "$source_dir/$folder" ]; then
     mkdir -p "$site_dir/content/$folder"
-    rsync -a --delete \
+    # GitHub-published articles may not exist in the local Obsidian vault.
+    # Absence in the vault is not a deletion request; delete explicitly in Git.
+    rsync -a \
       --exclude ".DS_Store" \
       --exclude ".obsidian" \
       --exclude ".git" \
