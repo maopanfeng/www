@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-source_dir="${OBSIDIAN_PUBLISH_DIR:-/Users/ben/Obsidian/WWW}"
+source_dir="${OBSIDIAN_PUBLISH_DIR:-$HOME/WEBSITE/www}"
 site_dir="$(cd "$(dirname "$0")/.." && pwd)"
 
 if [ ! -d "$source_dir" ]; then

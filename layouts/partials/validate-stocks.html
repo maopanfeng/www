@@ -1,0 +1,13 @@
+{{/* Block stale-vault deletions from replacing the last successful deployment. */}}
+{{ $site := .Site }}
+{{ range $code, $title := index site.Data.required_stocks .Lang }}
+  {{ $page := $site.GetPage (printf "/stocks/%s" $code) }}
+  {{ if not $page }}
+    {{ errorf "Required stock article missing: %s/stocks/%s; reconcile the Obsidian vault before publishing" $site.Language.Lang $code }}
+  {{ else if ne $page.Title $title }}
+    {{ errorf "Stock identity mismatch: %s/stocks/%s has title %q, expected %q" $site.Language.Lang $code $page.Title $title }}
+  {{ end }}
+{{ end }}
+{{ if $site.GetPage "/stocks/300433" }}
+  {{ errorf "Withdrawn Lens Technology article 300433 was reintroduced; remove it from the Obsidian publishing source" }}
+{{ end }}
