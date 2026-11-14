@@ -9,8 +9,6 @@
         header { position: fixed; top: 0; left: 0; right: 0; height: 80px; z-index: 9999; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: center; }
         .nav-container { width: 100%; max-width: 720px; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; }
         .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
-        .site-logo { width: 32px; height: 32px; border-radius: 6px; }
-        .site-title { font-weight: 800; font-size: 1.25rem; }
         
         /* 导航右侧布局 */
         .nav-right { display: flex; align-items: center; gap: 15px; }
@@ -37,10 +35,7 @@
 <body>
     <header>
         <div class="nav-container">
-            <a href="{{ if eq .Lang "cn" }}/cn/{{ else }}/{{ end }}" class="logo-wrapper">
-                <img src="/logo.png" alt="" class="site-logo">
-                <span class="site-title">FengliFund</span>
-            </a>
+            {{ partial "site-wordmark.html" . }}
             <div class="nav-right">
                 {{ if eq .Lang "en" }}
                     <a href="/cn/" class="lang-switch nav-link">中文</a>

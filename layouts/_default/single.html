@@ -9,8 +9,6 @@
         header { position: fixed; top: 0; left: 0; right: 0; height: 80px; z-index: 9999; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: center; }
         .nav-container { width: 100%; max-width: 720px; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; }
         .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex: 0 0 auto; }
-        .site-logo { width: 32px; height: 32px; border-radius: 6px; }
-        .site-title { font-weight: 800; font-size: 1.25rem; white-space: nowrap; display: inline-block !important; }
         .nav-right { display: flex; align-items: center; gap: 15px; flex: 1; justify-content: flex-end; min-width: 0; }
         .nav-link { font-size: 14px; opacity: 0.6; text-decoration: none; color: inherit; transition: opacity 0.2s; font-weight: 500; white-space: nowrap; }
         .nav-link:hover { opacity: 1; }
@@ -27,16 +25,13 @@
         .giscus-container { margin-top: 100px; padding-top: 40px; border-top: 1px solid rgba(0,0,0,0.05); margin-bottom: 80px; }
 
         footer { width: 100%; padding: 60px 24px 60px; text-align: center; font-size: 11px; opacity: 0.2; letter-spacing: 0.05em; }
-        @media (max-width: 600px) { .nav-container { padding: 0 16px; } .site-title { font-size: 1.1rem; } .search-box { width: 40px; } }
+        @media (max-width: 600px) { .nav-container { padding: 0 16px; } .search-box { width: 40px; } }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-container">
-            <a href="{{ if eq .Lang "cn" }}/cn/{{ else }}/{{ end }}" class="logo-wrapper">
-                <img src="/logo.png" alt="" class="site-logo">
-                <span class="site-title">FengliFund</span>
-            </a>
+            {{ partial "site-wordmark.html" . }}
             <div class="nav-right">
                 <div class="search-wrapper">
                     <input type="text" class="search-box" placeholder="Search..." onkeydown="handleSearch(event, this.value)">

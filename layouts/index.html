@@ -12,8 +12,6 @@
         
         /* 核心修复：防止 Logo 和文字标题被挤压 */
         .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex-shrink: 0; }
-        .site-logo { width: 32px; height: 32px; border-radius: 6px; }
-        .site-title { font-weight: 800; font-size: 1.25rem; white-space: nowrap; }
         
         .nav-right { display: flex; align-items: center; gap: 18px; }
         .nav-link { font-size: 14px; opacity: 0.6; text-decoration: none; color: inherit; transition: opacity 0.2s; font-weight: 500; }
@@ -191,10 +189,7 @@
 <body>
     <header>
         <div class="nav-container">
-            <a href="{{ if eq .Lang "cn" }}/cn/{{ else }}/{{ end }}" class="logo-wrapper">
-                <img src="/logo.png" alt="" class="site-logo">
-                <span class="site-title">FengliFund</span>
-            </a>
+            {{ partial "site-wordmark.html" . }}
             <div class="nav-right">
                 <div class="search-wrapper">
                     <input type="text" class="search-box" placeholder="Search..." onkeyup="filterSearch(this.value)">

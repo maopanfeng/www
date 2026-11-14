@@ -21,7 +21,7 @@
 <body>
     <header>
         <div class="nav-container">
-            <a href="{{ if eq .Lang "cn" }}/cn/{{ else }}/{{ end }}" style="font-weight:700;text-decoration:none;color:inherit;white-space:nowrap;">FengliFund</a>
+            {{ partial "site-wordmark.html" . }}
             <nav class="nav-right">
                 {{ if eq .Lang "en" }}
                     <a href="/cn/" class="lang-switch nav-link">中文</a>

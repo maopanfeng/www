@@ -62,8 +62,6 @@
             flex-shrink: 0;
         }
 
-        .site-logo { width: 34px; height: 34px; border-radius: 8px; }
-        .site-title { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em; }
         .nav-right, .nav-links {
             display: flex;
             align-items: center;
@@ -381,10 +379,7 @@
 <body>
     <header>
         <div class="nav-container">
-            <a href="{{ if eq .Lang "cn" }}/cn/{{ else }}/{{ end }}" class="logo-wrapper">
-                <img src="/logo.png" alt="" class="site-logo">
-                <span class="site-title">FengliFund</span>
-            </a>
+            {{ partial "site-wordmark.html" . }}
             <div class="nav-right">
                 <nav class="nav-links">
                     <a href="/cn/genius" class="nav-link">Genius</a>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 112">
+  <text x="0" y="70" textLength="208" lengthAdjust="spacingAndGlyphs" font-family="Baskerville, Georgia, serif" font-size="84" font-weight="600" letter-spacing="-1" fill="#18784E">FengLi</text>
+  <g fill="#9A6437" fill-rule="evenodd" transform="translate(2 92) scale(1 1.23)">
+    <path d="M0 0h41v2.7H6v2.8h30v2.7H6V13H0Z"/>
+    <path d="M53 0h6v7q0 3.5 8 3.5h14q8 0 8-3.5V0h6v7.1q0 5.9-14 5.9H67q-14 0-14-5.9Z"/>
+    <path d="M107 13V0h6l30 9.4V0h6v13h-6L113 3.6V13Z"/>
+    <path d="M161 0h24q19 0 19 6.5T185 13h-24Zm6 2.7v7.6h18q13 0 13-3.8t-13-3.8Z"/>
+  </g>
+</svg>
