@@ -1,6 +1,7 @@
 ---
 title: "AAOI：买入复盘与资本回报研究"
-date: 2026-11-07
+date: 2028-08-01
+publishDate: 2026-11-07
 slug: "aaoi"
 translationKey: "aaoi-2026-11"
 keywords: ["AAOI", "Applied Optoelectronics", "锋丽投资", "光模块", "ROIC", "估值", "现金流"]
