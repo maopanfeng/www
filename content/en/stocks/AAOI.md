@@ -1,6 +1,6 @@
 ---
 title: "AAOI: Investment Review and Returns on Capital"
-date: 2028-08-01
+date: 2026-08-01
 publishDate: 2026-11-07
 slug: "aaoi"
 translationKey: "aaoi-2026-11"
