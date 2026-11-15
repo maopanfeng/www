@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "锋丽投资"
+title = "FengLi Fund"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -14,6 +14,7 @@ home = ["HTML", "JSON"]
     weight = 1
 
   [languages.cn]
+    title = "锋丽投资"
     contentDir = "content/cn"
     languageName = "中文"
     weight = 2
